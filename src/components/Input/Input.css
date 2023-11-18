@@ -1,0 +1,31 @@
+.InputWrapper {
+  display: flex;
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 30rem;
+  height: 3rem;
+  margin: 0.125rem;
+}
+
+.input {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  background: none;
+  border: 0px;
+  width: 30rem;
+  height: 3rem;
+  outline: none;
+  letter-spacing: 1px;
+  color: black;
+}
+
+@media screen and (max-width: 576px) {
+  .InputWrapper {
+    width: 100%;
+  }
+  .input {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

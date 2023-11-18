@@ -1,0 +1,145 @@
+.AppWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-inline: auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 1rem;
+  margin-left: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.PrimaryHeader {
+  background: #444;
+  color: #fff;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.Header {
+  margin: 0px;
+  font-size: 3rem;
+}
+
+.Wrapper {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.WeatherWrapper {
+  display: grid;
+  grid-template-rows: 2fr 2fr 5fr;
+  justify-content: center;
+  width: 40vw;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 4px 4px 3px #888888;
+  overflow: hidden;
+}
+
+.ForecastWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.DayBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(var(--day-color), white);
+}
+
+.NightBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(var(--clouds), var(--night-color));
+}
+
+.CloudyDay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(var(--clouds) 60%, var(--day-color));
+}
+
+.CloudyNight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(var(--clouds) 60%, var(--night-color));
+}
+
+.RainyDay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    color-mix(in srgb, var(--clouds) 75%, var(--day-color)) 60%,
+    var(--rain)
+  );
+}
+
+.RainyNight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    color-mix(in srgb, var(--clouds) 75%, var(--night-color)) 60%,
+    var(--rain)
+  );
+}
+
+.Default {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+}
+
+@media screen and (max-width: 800px) {
+  .AppWrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .Wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .WeatherWrapper {
+    width: 100%;
+  }
+}

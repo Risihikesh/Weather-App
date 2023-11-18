@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --day-color: #d6db3d;
+  --night-color: #101419;
+  --clouds: #c3c6c7;
+  --rain: #476c9b;
+  --snow: #ececec;
+  --mist-one: #ababab;
+  --mist-two: #929bb1;
+}
